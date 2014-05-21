@@ -1,0 +1,62 @@
+
+<div class="container box">
+<div class="jumbotron">
+  <h3>Provide the following words:</h3>
+  <br>  
+  <div class="row">
+    <div class="col-sm-4">
+         <input type="text" ng-click="male.name = ''" ng-init="male.name = 'Male Name'" ng-model="male.name" class="form-control" placeholder="Male Name">    
+    </div>
+    <div class="col-sm-4">
+         <input type="text" ng-click="dirty.task = ''" ng-init="dirty.task = 'Dirty Task'"ng-model="dirty.task" class="form-control" placeholder="Dirty Task">    
+    </div>
+    <div class="col-sm-4">
+         <input type="text" ng-click="obnox.celeb = ''" ng-init="obnox.celeb = 'Obnoxious Celebrity'" ng-model="obnox.celeb" class="form-control" placeholder="Obnoxious Celebrity">    
+    </div>     
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+         <input type="text" ng-click="job.title = ''" ng-init="job.title = 'Job Title'" ng-model="job.title" class="form-control" placeholder="Job Title">    
+    </div>
+    <div class="col-sm-4">
+         <input type="text" ng-click="celebrity = ''" ng-init="celebrity = 'Celebrity'" ng-model="celebrity" class="form-control" placeholder="Celebrity">    
+    </div>
+    <div class="col-sm-4">
+         <input type="number" ng-click="HugeNumber = ''" ng-init="HugeNumber = 0" ng-model="HugeNumber" class="form-control" placeholder="Huge Number">    
+    </div>     
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+         <input type="text" ng-click="tedious.task = ''" ng-init="tedious.task = 'Tedious Task'" ng-model="tedious.task" class="form-control" placeholder="Tedious Task">    
+    </div>
+    <div class="col-sm-4">
+         <input type="text" ng-click="useless.skill = ''" ng-init="useless.skill = 'Useless Skill'" ng-model="useless.skill" class="form-control" placeholder="Useless Skill">    
+    </div>
+    <div class="col-sm-4">
+         <input type="text" ng-click="adjective = ''" ng-init="adjective = 'Adjective'" ng-model="adjective" class="form-control" placeholder="Adjective">    
+    </div>     
+  </div>  
+</div>  
+</div>
+
+
+<section class="box container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="story">
+        <span>{{male.name}}</span> was a <span>{{job.title}}</span> who loved technology. Although he loved parts of his job, he absolutely hated  <span>{{tedious.task}}</span> and <span>{{dirty.task}}</span>. So, <span>{{male.name}}</span> met with his life mentor <span>{{celebrity}}</span> who told him to learn how to <span>{{useless.skill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{useless.skill}}</span> so he studied programming instead. 
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="story">
+        What a great decision! With his new skills, <span>{{male.name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnox.celeb}}</span> that not only loved {{dirty.task}} but did it <span>{{HugeNumber}}</span> times faster. 
+      </div>
+
+    </div>
+  </div>
+</section>
