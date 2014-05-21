@@ -3,39 +3,45 @@
 <div class="jumbotron">
   <h3>Provide the following words:</h3>
   <br>  
+
+  <div class="row">
+      <button class="btn btn-primary" ng-class="{active: gender.male.valid ===true}" ng-click="clickMale()">Male</button> or
+      <button class="btn btn-danger pink" ng-class="{active: gender.female.valid ===true}" ng-click="clickFemale()">Female</button> ?
+  </div>
+<br>
   <div class="row">
     <div class="col-sm-4">
-         <input type="text" ng-click="male.name = ''" ng-init="male.name = 'Male Name'" ng-model="male.name" class="form-control" placeholder="Male Name">    
+         <input type="text" ng-click="adlib.name = ''" ng-model="adlib.name" class="form-control" placeholder="Male Name">    
     </div>
     <div class="col-sm-4">
-         <input type="text" ng-click="dirty.task = ''" ng-init="dirty.task = 'Dirty Task'"ng-model="dirty.task" class="form-control" placeholder="Dirty Task">    
+         <input type="text" ng-click="adlib.dirty = ''" ng-model="adlib.dirty" class="form-control" placeholder="Dirty Task">    
     </div>
     <div class="col-sm-4">
-         <input type="text" ng-click="obnox.celeb = ''" ng-init="obnox.celeb = 'Obnoxious Celebrity'" ng-model="obnox.celeb" class="form-control" placeholder="Obnoxious Celebrity">    
+         <input type="text" ng-click="adlib.obnox = ''" ng-model="adlib.obnox" class="form-control" placeholder="Obnoxious Celebrity">    
     </div>     
   </div>
   <br>
   <div class="row">
     <div class="col-sm-4">
-         <input type="text" ng-click="job.title = ''" ng-init="job.title = 'Job Title'" ng-model="job.title" class="form-control" placeholder="Job Title">    
+         <input type="text" ng-click="adlib.job = ''" ng-model="adlib.job" class="form-control" placeholder="Job Title">    
     </div>
     <div class="col-sm-4">
-         <input type="text" ng-click="celebrity = ''" ng-init="celebrity = 'Celebrity'" ng-model="celebrity" class="form-control" placeholder="Celebrity">    
+         <input type="text" ng-click="adlib.celebrity = ''" ng-model="adlib.celebrity" class="form-control" placeholder="Celebrity">    
     </div>
     <div class="col-sm-4">
-         <input type="number" ng-click="HugeNumber = ''" ng-init="HugeNumber = 0" ng-model="HugeNumber" class="form-control" placeholder="Huge Number">    
+         <input type="number" ng-click="adlib.bignumber = ''"  ng-model="adlib.bignumber" class="form-control" placeholder="Huge Number">    
     </div>     
   </div>
   <br>
   <div class="row">
     <div class="col-sm-4">
-         <input type="text" ng-click="tedious.task = ''" ng-init="tedious.task = 'Tedious Task'" ng-model="tedious.task" class="form-control" placeholder="Tedious Task">    
+         <input type="text" ng-click="adlib.tedious = ''" ng-model="adlib.tedious" class="form-control" placeholder="Tedious Task">    
     </div>
     <div class="col-sm-4">
-         <input type="text" ng-click="useless.skill = ''" ng-init="useless.skill = 'Useless Skill'" ng-model="useless.skill" class="form-control" placeholder="Useless Skill">    
+         <input type="text" ng-click="adlib.useless = ''" ng-model="adlib.useless" class="form-control" placeholder="Useless Skill">    
     </div>
     <div class="col-sm-4">
-         <input type="text" ng-click="adjective = ''" ng-init="adjective = 'Adjective'" ng-model="adjective" class="form-control" placeholder="Adjective">    
+         <input type="text" ng-click="adlib.adj = ''" ng-model="adlib.adj" class="form-control" placeholder="Adjective">    
     </div>     
   </div>  
 </div>  
@@ -46,7 +52,24 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="story">
-        <span>{{male.name}}</span> was a <span>{{job.title}}</span> who loved technology. Although he loved parts of his job, he absolutely hated  <span>{{tedious.task}}</span> and <span>{{dirty.task}}</span>. So, <span>{{male.name}}</span> met with his life mentor <span>{{celebrity}}</span> who told him to learn how to <span>{{useless.skill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{useless.skill}}</span> so he studied programming instead. 
+        <span>{{adlib.name}}</span> was a <span>{{adlib.job}}</span> who loved technology. Although             
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.he}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.he}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.she}}</span> loved parts of 
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.his}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.his}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.her}}</span>  job,             
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.he}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.he}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.she}}</span> absolutely hated  <span>{{adlb.tedious}}</span> and <span>{{adlib.dirty}}</span>. So, <span>{{adlib.name}}</span> met with             <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.his}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.his}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.her}}</span> life mentor <span>{{adlib.celebrity}}</span> who told             
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.his}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.his}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.her}}</span> to learn how to <span>{{adlib.useless}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{adlib.useless}}</span> so             
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.he}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.he}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.she}}</span> studied programming instead. 
       </div>
     </div>
   </div>
@@ -54,7 +77,10 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="story">
-        What a great decision! With his new skills, <span>{{male.name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnox.celeb}}</span> that not only loved {{dirty.task}} but did it <span>{{HugeNumber}}</span> times faster. 
+        What a great decision! With             
+            <span ng-if="gender.male.valid === false && gender.female.valid === false">{{gender.male.his}}</span> 
+            <span ng-if="gender.male.valid === true">{{gender.male.his}}</span>
+            <span ng-if="gender.female.valid === true">{{gender.female.her}}</span> new skills, <span>{{adlib.name}}</span> built a(n) <span>{{adlib.adj}}</span> robot named <span>{{adlib.obnox}}</span> that not only loved {{adlib.dirty}} but did it <span>{{adlib.bignumber}}</span> times faster. 
       </div>
 
     </div>

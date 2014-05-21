@@ -8,6 +8,10 @@ span {
   font-size: 22px;
 }
 
+.pink {
+  background-color: pink !important;
+  border: 1px solid pink !important;
+}
 .story{
   line-height: 40px;
   padding: 12px;
