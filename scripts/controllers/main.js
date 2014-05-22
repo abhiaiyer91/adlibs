@@ -2,19 +2,7 @@
 
 angular.module('adlibsApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.adlib = 
-    	{
-    		name: 'Abhi Aiyer',
-    		dirty: 'Dirty Task',
-    		obnox: 'Kanye West',
-    		job: 'Web Developer',
-    		celebrity: 'George Clooney',
-    		bignumber: 0,
-    		tedious: 'Padding & Margins',
-    		useless: 'Basket Weaving',
-    		adj: 'Gigantic'
-
-    	};
+    $scope.madlibs = $scope.adlib;
 
     $scope.gender = 
     	{
@@ -43,5 +31,19 @@ angular.module('adlibsApp')
    		$scope.gender.male.valid = false;
    		$scope.gender.female.valid = true;
    };
+
+   $scope.form = true;
+
+   $scope.submit = function () {
+      console.log($scope.adlib);
+      $scope.story = true;
+      $scope.form = false;
+   }
+
+   $scope.reset = function (){
+      $scope.story = false;
+      $scope.form = true;
+      $scope.madlibs = $scope.adlibs;
+   }
 
   });
