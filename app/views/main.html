@@ -1,6 +1,6 @@
 
 <div class="container box">
-<div class="jumbotron" ng-show="form">
+<div class="jumbotron animated" ng-class="{fadeIn: form === true}" ng-show="form">
   <h3>Provide the following words:</h3>
   <br>  
 
@@ -54,7 +54,7 @@
 </div>
 
 
-<section class="box container" ng-show="story">
+<section class="box container animated" ng-class="{bounceInLeft: story}" ng-show="story">
   <div class="row">
     <div class="col-sm-12">
       <div class="story">

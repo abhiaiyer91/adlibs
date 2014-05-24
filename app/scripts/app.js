@@ -2,7 +2,7 @@
 
 angular
   .module('adlibsApp', [
-    'ngRoute'
+    'ngRoute', 'ngAnimate', 'ngAnimate-animate.css'
   ])
   .config(function ($routeProvider) {
     $routeProvider
