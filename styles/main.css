@@ -20,6 +20,15 @@ span {
   border-radius: 4px;*/
 }
 
+.show, .hide {
+  transition:0.5s linear all;
+}
+.show { opacity:0; }
+.show-active { opacity:1; }
+.hide { opacity:1; }
+.hide-active { opacity:0; }
+
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
