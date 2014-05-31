@@ -1,35 +1,35 @@
 'use strict';
 
 window.Abhi
-  .controller('MainCtrl', function ($scope) {
-    $scope.madlibs = $scope.adlib;
+  .controller('MainCtrl', ['$scope', function($scope){
+     $scope.madlibs = $scope.adlib;
 
     $scope.gender = 
-    	{
-    		male: 
-    		{
-    			valid: false,
-    			his: 'his',
-    			him: 'him',
-    			he: 'he'
-    		},
-    		female: 
-    		{
-    			valid: false,
-    			her: 'her',
-    			she: 'she'  			
-    		}
-    		
-    	}
+      {
+        male: 
+        {
+          valid: false,
+          his: 'his',
+          him: 'him',
+          he: 'he'
+        },
+        female: 
+        {
+          valid: false,
+          her: 'her',
+          she: 'she'        
+        }
+        
+      }
 
    $scope.clickMale = function (){
-   		$scope.gender.male.valid = true;
-   		$scope.gender.female.valid = false;
+      $scope.gender.male.valid = true;
+      $scope.gender.female.valid = false;
    };
 
    $scope.clickFemale = function (){
-   		$scope.gender.male.valid = false;
-   		$scope.gender.female.valid = true;
+      $scope.gender.male.valid = false;
+      $scope.gender.female.valid = true;
    };
 
    $scope.form = true;
@@ -44,6 +44,5 @@ window.Abhi
       $scope.story = false;
       $scope.form = true;
       $scope.madlibs = $scope.adlibs;
-   }
-
-  });
+   }   
+  }]);
