@@ -1,8 +1,11 @@
+
+
+(function(window){
 'use strict';
 
-angular
+window.Abhi = angular
   .module('adlibsApp', [
-    'ngRoute', 'ngAnimate', 'ngAnimate-animate.css'
+    'ngRoute', 'ngAnimate'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -14,3 +17,8 @@ angular
         redirectTo: '/'
       });
   });
+
+}(window));
+
+
+

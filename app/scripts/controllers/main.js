@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adlibsApp')
+window.Abhi
   .controller('MainCtrl', function ($scope) {
     $scope.madlibs = $scope.adlib;
 
